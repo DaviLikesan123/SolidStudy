@@ -12,3 +12,7 @@ class Circle(private val radius: Double) : Shape {
 class Square(private val width: Double, private val height: Double) : Shape {
     override fun calculateArea(): Double = width * height
 }
+
+class Triangle(private val width: Double, private val height: Double) : Shape {
+    override fun calculateArea(): Double = (width * height)/2
+}
