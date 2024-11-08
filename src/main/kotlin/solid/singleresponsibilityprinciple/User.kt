@@ -1,6 +1,8 @@
-package solid
+package solid.singleresponsibilityprinciple
 
-// Single Responsibility Principle (Princípio da responsabilidade única)
+// Single Responsibility Principle
+// Each class have your functions like:
+//User, UserRepository, UserAuthentication
 
 data class User(val id: Int, val name: String)
 
@@ -24,6 +26,20 @@ class UserRepository {
     }
 }
 
+fun main (){
+
+    val user = User(23, "David")
+
+    val repository = UserRepository()
+
+    repository.addUser(user)
+
+    print(repository.getAllUsers())
+
+    print(repository.findUserById(23))
+
+    print(repository.removeUser(user))
+}
 
 
 
